@@ -12,3 +12,6 @@ RUN apt-get update && apt-get install -y  \
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
 	php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
 	composer
+
+RUN chown -R www-data:www-data /var/www
+RUN chmod -R 777 /var/www
